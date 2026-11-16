@@ -7,15 +7,14 @@
     <version>DevTest-33</version>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.release>25</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <repositories>
         <repository>
             <id>paper-repo</id>
-            <url>https://repo.destroystokyo.com/repository/maven-public/</url>
+            <url>https://repo.papermc.io/repository/maven-public/</url>
         </repository>
 
         <repository>
@@ -52,8 +51,16 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.16.0</version>
+                <configuration>
+                    <release>25</release>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.2.4</version>
+                <version>3.6.2</version>
 
                 <configuration>
 
@@ -96,16 +103,20 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.15.2-R0.1-SNAPSHOT</version>
+            <groupId>io.papermc.paper</groupId>
+            <artifactId>paper-api</artifactId>
+            <version>26.3.build.249-stable</version>
             <scope>provided</scope>
         </dependency>
 
+        <!-- Zapzaf/Slimefun4 fork (experimental branch) with Minecraft 26.3 support.
+             JitPack cannot build it, so install the release jar locally first:
+             mvn install:install-file -Dfile=Slimefun-4.9-UNOFFICIAL-26.3.jar -DgroupId=com.github.Zapzaf
+                 -DartifactId=Slimefun4 -Dversion=4.9-UNOFFICIAL-26.3 -Dpackaging=jar -->
         <dependency>
-            <groupId>com.github.TheBusyBiscuit</groupId>
+            <groupId>com.github.Zapzaf</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-27</version>
+            <version>4.9-UNOFFICIAL-26.3</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>

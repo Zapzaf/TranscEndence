@@ -120,10 +120,10 @@ public class TranscEndence extends JavaPlugin implements SlimefunAddon {
 
         new Research(new NamespacedKey(this, "unstable"),
             ++researchId, "Unstable", 23)
-            .addItems(TEItems.UNSTABLE_INGOT,
-                TEItems.UNSTABLE_INGOT_2,
-                TEItems.UNSTABLE_INGOT_3,
-                TEItems.UNSTABLE_INGOT_4).register();
+            .addItems(TEItems.UNSTABLE_INGOT.item(),
+                TEItems.UNSTABLE_INGOT_2.item(),
+                TEItems.UNSTABLE_INGOT_3.item(),
+                TEItems.UNSTABLE_INGOT_4.item()).register();
 
         for (Zots.Type type : Zots.Type.values()) {
             new Zots(type).register(this);
@@ -135,8 +135,8 @@ public class TranscEndence extends JavaPlugin implements SlimefunAddon {
 
         new Research(new NamespacedKey(this, "stable"),
             ++researchId, "Stable", 30)
-            .addItems(TEItems.STABLE_INGOT,
-                TEItems.STABLE_BLOCK).register();
+            .addItems(TEItems.STABLE_INGOT.item(),
+                TEItems.STABLE_BLOCK.item()).register();
         /* More items moved below for aesthetic purposes */
 
 
@@ -145,24 +145,24 @@ public class TranscEndence extends JavaPlugin implements SlimefunAddon {
 
         new Research(new NamespacedKey(this, "quirp_scatterer"),
             ++researchId, "Quirps Scatterer", 20)
-            .addItems(TEItems.QUIRP_SCATTERER).register();
+            .addItems(TEItems.QUIRP_SCATTERER.item()).register();
 
         new NanobotCrafter().register(this);
 
         new Research(new NamespacedKey(this, "nanobot_crafter"),
             ++researchId, "Nanobot Crafter", 15)
-            .addItems(TEItems.NANOBOT_CRAFTER).register();
+            .addItems(TEItems.NANOBOT_CRAFTER.item()).register();
 
         new QuirpOscillator().register(this);
 
         new Research(new NamespacedKey(this, "quirp_oscillator"),
             ++researchId, "Quirps Oscillator", 37)
-            .addItems(TEItems.QUIRP_OSCILLATOR,
-                TEItems.QUIRP_UP,
-                TEItems.QUIRP_DOWN,
-                TEItems.QUIRP_LEFT,
-                TEItems.QUIRP_RIGHT,
-                TEItems.QUIRP_CONDENSATE).register();
+            .addItems(TEItems.QUIRP_OSCILLATOR.item(),
+                TEItems.QUIRP_UP.item(),
+                TEItems.QUIRP_DOWN.item(),
+                TEItems.QUIRP_LEFT.item(),
+                TEItems.QUIRP_RIGHT.item(),
+                TEItems.QUIRP_CONDENSATE.item()).register();
 
 
         /* Items pt. 2 */
@@ -171,14 +171,14 @@ public class TranscEndence extends JavaPlugin implements SlimefunAddon {
         }
         new Research(new NamespacedKey(this, "zots"),
             ++researchId, "Zots", 30)
-            .addItems(TEItems.ZOT_UP,
-                TEItems.ZOT_DOWN,
-                TEItems.ZOT_LEFT,
-                TEItems.ZOT_RIGHT,
-                TEItems.ZOT_UP_2,
-                TEItems.ZOT_DOWN_2,
-                TEItems.ZOT_LEFT_2,
-                TEItems.ZOT_RIGHT_2).register();
+            .addItems(TEItems.ZOT_UP.item(),
+                TEItems.ZOT_DOWN.item(),
+                TEItems.ZOT_LEFT.item(),
+                TEItems.ZOT_RIGHT.item(),
+                TEItems.ZOT_UP_2.item(),
+                TEItems.ZOT_DOWN_2.item(),
+                TEItems.ZOT_LEFT_2.item(),
+                TEItems.ZOT_RIGHT_2.item()).register();
 
         for (Daxi.Type type : Daxi.Type.values()) {
             new Daxi(type).register(this);
@@ -186,11 +186,11 @@ public class TranscEndence extends JavaPlugin implements SlimefunAddon {
 
         new Research(new NamespacedKey(this, "daxis"),
             ++researchId, "Daxis", 30)
-            .addItems(TEItems.DAXI_STRENGTH,
-                TEItems.DAXI_ABSORPTION,
-                TEItems.DAXI_FORTITUDE,
-                TEItems.DAXI_SATURATION,
-                TEItems.DAXI_REGENERATION).register();
+            .addItems(TEItems.DAXI_STRENGTH.item(),
+                TEItems.DAXI_ABSORPTION.item(),
+                TEItems.DAXI_FORTITUDE.item(),
+                TEItems.DAXI_SATURATION.item(),
+                TEItems.DAXI_REGENERATION.item()).register();
 
         for (Polarizer.Type type : Polarizer.Type.values()) {
             new Polarizer(type).register(this);
@@ -198,8 +198,8 @@ public class TranscEndence extends JavaPlugin implements SlimefunAddon {
 
         new Research(new NamespacedKey(this, "polarizers"),
             ++researchId, "Polarizers", 23)
-            .addItems(TEItems.VERTICAL_POLARIZER,
-                TEItems.HORIZONTAL_POLARIZER).register();
+            .addItems(TEItems.VERTICAL_POLARIZER.item(),
+                TEItems.HORIZONTAL_POLARIZER.item()).register();
 
         /* Machines pt. 2 */
         new QuirpAnnihilator().register(this);
@@ -210,15 +210,15 @@ public class TranscEndence extends JavaPlugin implements SlimefunAddon {
 
         new Research(new NamespacedKey(this, "quirp_annihilator"),
             ++researchId, "Quirps Annihilator", 40)
-            .addItems(TEItems.QUIRP_ANNIHILATOR,
-                TEItems.QUIRP_CYCLER,
-                TEItems.STABILIZER).register();
+            .addItems(TEItems.QUIRP_ANNIHILATOR.item(),
+                TEItems.QUIRP_CYCLER.item(),
+                TEItems.STABILIZER.item()).register();
 
         new ZotOverloader().register(this);
 
         new Research(new NamespacedKey(this, "zot_overloader"),
             ++researchId, "Zot Overloader", 35)
-            .addItems(TEItems.ZOT_OVERLOADER).register();
+            .addItems(TEItems.ZOT_OVERLOADER.item()).register();
 
         new SlimefunItem(TEItems.transcendence, TEItems.TE_INFO, RecipeType.NULL, new ItemStack[0]
         ).register(this);
